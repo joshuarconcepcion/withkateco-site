@@ -20,10 +20,10 @@ export default function Homepage(): JSX.Element {
         <Navbar />
 
         {/* HERO SECTION */}
-        <div className="flex flex-1 justify-center items-center px-4">
+        <div className="flex flex-1 justify-center items-center">
           <img
             src={homepageHeroImg}
-            className="block h-auto max-w-[clamp(1000px,100vw,250000px)]"
+            className="w-full h-[clamp(300px,50vh,800px)] object-cover"
             alt=""
           />
         </div>

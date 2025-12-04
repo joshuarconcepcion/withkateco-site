@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'LTSoul';
+    src: url('./assets/LTSoul-Regular.otf');
+}
+
+@theme {
+  --font-ltsoul: "LTSoul", sans-serif;
+}
+

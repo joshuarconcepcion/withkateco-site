@@ -16,10 +16,10 @@ export default function Navbar(): JSX.Element {
             ${mounted ? 'opacity-100 transate-y-0' : 'opacity-0 -translate-y-10'}
             `}>
 
-            {/* LOGO */}
-            <img src={withkatecoLogo} className='h-[60px] w-auto px-4'/>
-
-            {/* DESKTOP NAVBAR */}
+            <Link to='/'>
+                <img src={withkatecoLogo} className='h-[60px] w-auto px-4'/>
+            </Link>
+            
             <div className={`hidden md:flex justify-around gap-8 font-ltsoul px-8`}>
                 <Link to='/about' className='text-xl text-white' onClick={() => setOpen(false)}>about</Link>
                 <Link to='/calendar' className='text-xl text-white' onClick={() => setOpen(false)}>calendar</Link>
@@ -27,7 +27,6 @@ export default function Navbar(): JSX.Element {
                 <Link to='/connect' className='text-xl text-white' onClick={() => setOpen(false)}>connect</Link>
             </div>
 
-            {/* MOBILE NAVBAR */}
             <button 
                 className='md:hidden flex flex-col gap-1.5 px-8'
                 onClick={() => setOpen(!open)}
@@ -36,7 +35,6 @@ export default function Navbar(): JSX.Element {
                 <span className='w-6 h-0.75 bg-white transition'></span>
             </button>
 
-            
             <div 
                 className={`font-ltsoul absolute top-0 left-0 w-full 
                         bg-black/50 backdrop-blur-md min-h-[50vh] 

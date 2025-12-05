@@ -1,10 +1,16 @@
 import { type JSX } from 'react';
-import Home from './components/Homepage';
+import Homepage from './pages/Homepage';
+import RootLayout from './layout/RootLayout';
+import { Route, Routes } from 'react-router';
 
-function App(): JSX.Element {
+export default function App(): JSX.Element {
   return (
-    <Home />
+    <Routes>
+      <Route path = '/' element={<RootLayout />}> 
+        <Route index element={<Homepage />} />
+      </Route>
+    </Routes>
   )
 }
 
-export default App
+
